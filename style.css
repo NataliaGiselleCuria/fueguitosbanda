@@ -8,6 +8,7 @@ body{
     background-image: url(/src/back-w.png);
     background-size: cover;
     overflow: hidden;  
+    
 }
 
 h1{
@@ -29,11 +30,13 @@ main {
     width: 600px;
     margin: auto;
     position: relative;
+    animation: load-bot 1.5s;
+    box-sizing: border-box;
 }
 
 .logo {
     width: 80%;
-    height: 20%;
+    height: 15%;
     filter: opacity(0.6);
 }
 
@@ -67,9 +70,15 @@ a{
     height: 100%;
 }
 
+audio { 
+    width: 60%; 
+    border-radius: 90px;
+    transform: scale(1.05);
+  }
+
 .flip-card {
     background-color: transparent;
-    width: 80%;
+    width: 100%;
     height: 60%;
     perspective: 1000px;
     display: flex;
@@ -129,6 +138,21 @@ transform: rotateY(180deg);
     .flip-card {
         height: 300px;
         width: 100%;
+    }
+
+    audio{
+        width: 100%;
+    }
+}
+
+@keyframes load-bot {
+    0%{
+        visibility: hidden;
+        margin-top: 10%;
+    }
+    100%{
+        visibility: visible;
+        margin-top: 0;
     }
 }
 
