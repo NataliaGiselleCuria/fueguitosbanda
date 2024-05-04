@@ -148,7 +148,7 @@ transform: rotateY(180deg);
 @keyframes load-bot {
     0%{
         visibility: hidden;
-        margin-top: 10%;
+        margin-top: 1%;
     }
     100%{
         visibility: visible;
