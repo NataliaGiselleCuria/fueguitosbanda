@@ -1,0 +1,133 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body{
+    background-image: url(/src/back-w.png);
+    background-size: cover;
+    overflow: hidden;  
+}
+
+h1{
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.logo {
+    width: 80%;
+    height: 20%;
+    filter: opacity(0.6);
+}
+
+.tapa{
+    width: 35%;
+}
+
+.redes {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.red-social {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Freeman', sans-serif;
+    font-size: xx-large;
+}
+
+.red-social img{
+    width: auto;
+}
+
+a{
+    color: #5e5e5e;
+    text-decoration: none;
+    height: 100%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 80%;
+    height: 60%;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden; /* Safari */
+backface-visibility: hidden;
+}
+
+.flip-card-back {
+transform: rotateY(180deg);
+}
+
+@media(max-width:760px){
+
+    html{
+        display: flex;
+    }
+
+    body{
+        margin: auto;
+        height: 70%;
+    }
+
+    main{
+        margin: 0;
+        width: 100%;
+        min-height: 500px;
+        justify-content: flex-start;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .flip-card {
+        height: 300px;
+        width: 100%;
+    }
+}
+
