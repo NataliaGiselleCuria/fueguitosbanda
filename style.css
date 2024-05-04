@@ -26,6 +26,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 600px;
     margin: auto;
     position: relative;
 }
@@ -103,7 +104,7 @@ backface-visibility: hidden;
 transform: rotateY(180deg);
 }
 
-@media(max-width:760px){
+@media(max-width:600px){
 
     html{
         display: flex;
