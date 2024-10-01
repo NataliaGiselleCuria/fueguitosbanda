@@ -2,6 +2,7 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    transition: all 0.6s ease;
 }
 
 body{
@@ -27,11 +28,11 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 600px;
-    margin: auto;
     position: relative;
     animation: load-bot 1.5s;
     box-sizing: border-box;
+    gap: 20px;
+    padding: 0 100px !important;
 }
 
 .logo {
@@ -60,10 +61,6 @@ main {
     font-size: xx-large;
 }
 
-.red-social img{
-    width: auto;
-}
-
 a{
     color: #5e5e5e;
     text-decoration: none;
@@ -74,12 +71,16 @@ audio {
     width: 60%; 
     border-radius: 90px;
     transform: scale(1.05);
-  }
+}
+
+.cards-cont{
+    height: 65vh;
+    display: flex;
+}
 
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 60%;
     perspective: 1000px;
     display: flex;
     flex-direction: column;
@@ -113,37 +114,13 @@ backface-visibility: hidden;
 transform: rotateY(180deg);
 }
 
-@media(max-width:600px){
-
-    html{
-        display: flex;
-    }
-
-    body{
-        margin: auto;
-        height: 70%;
-    }
-
+@media(max-width:1200px){
     main{
-        margin: 0;
-        width: 100%;
-        min-height: 500px;
-        justify-content: flex-start;
+        padding: 0!important;
     }
-
-    .logo{
-        width: 100%;
-    }
-
-    .flip-card {
-        height: 300px;
-        width: 100%;
-    }
-
-    audio{
-        width: 100%;
-    }
+   
 }
+
 
 @keyframes load-bot {
     0%{
